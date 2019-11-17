@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: #fcfcfc;
+  font-size: 18px;
+  text-align: justify;
+}
+
+*{
+    margin : 0;
+}
+
+
+h1,
+h2 {
+  color: #e84393;
+  margin: 0% 16% 0% 16%;
+}
+
+.input-container h1{
+  margin: 5px 0px 20px 0px;
+}
+
+header #title {
+  text-align: center;
+  padding: 12px;
+  background-color: deeppink;
+  color: white;
+  margin: 0 0 30px 0;
+  height: 100px;
+  padding-top: 100px;
+}
+
+
+a {
+  color: #fd79a8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline dashed;
+}
+
+div{
+    margin: 0% 16% 0% 16%;
+}
+
+img{
+  margin : 30px 0px 30px 0px;
+}
+
+button {
+  background-color: #fcfcfc;
+  border: 1px solid #fd79a8;
+  color: #fd79a8;
+  padding: 3px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+}
+
+input {
+  outline: none;
+  font-size: 17px;
+  border: 1px solid deeppink;
+  color: deeppink;
+}
+
+button:hover {
+  background-color: deeppink;
+  color: #fcfcfc;
+  transition-duration: 0.2s;
+}
+
+.input-container {
+  padding-left: 10px;
+  margin-top: 4%;
+}
+
+#output-container {
+  margin : 5% 0% 0% 20%;
+}
+
+.quote{
+  font-family: 'Courier New', Courier, monospace ;
+  color:#ff009b;
+}
+
+.code{
+  font-family: 'Roboto Mono', monospace;
+  color:#ff009b;
+}
