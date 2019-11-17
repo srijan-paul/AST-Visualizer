@@ -9,13 +9,13 @@ body {
 
 *{
     margin : 0;
+    max-width: 100%;
 }
 
 
 h1,
 h2 {
   color: #e84393;
-  margin: 0% 16% 0% 16%;
 }
 
 .input-container h1{
@@ -39,16 +39,18 @@ a {
   text-decoration: none;
 }
 
+main{
+  margin: 0% 16% 0% 16%;
+  
+}
+
 a:hover {
   text-decoration: underline dashed;
 }
 
-div{
-    margin: 0% 16% 0% 16%;
-}
-
 img{
   margin : 30px 0px 30px 0px;
+  max-width: 100%;
 }
 
 button {
@@ -82,7 +84,8 @@ button:hover {
 }
 
 #output-container {
-  margin : 5% 0% 0% 20%;
+  margin-top: 5%;
+  max-width: 100%;
 }
 
 .quote{
