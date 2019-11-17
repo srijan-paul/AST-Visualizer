@@ -3,8 +3,9 @@ let nodes = [],
 
 
 function setup() {
-    let ctx = createCanvas(900, 500);
+    let ctx = createCanvas(800, 400);
     ctx.parent('output-container');
+    ctx.style('max-width : 100%')
     frameRate(1);
     input = select('#input');
     parseBtn = select('#parse');
@@ -46,7 +47,7 @@ function reset() {
 }
 
 function draw() {
-    background('#fff2fe');
+    background('#f6e3ff');
     for (let node of nodes) {
         node.show();
     }
