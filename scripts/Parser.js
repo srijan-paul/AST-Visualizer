@@ -104,7 +104,7 @@ function generateAST(tokens) {
     }
 
     function Tree(left, node, right) {
-        return new Node(left, node, right, 40, 10, 10);
+        return new Node(left, node, right, 45, 10, 10);
     }
 
     function NUD(node) {
