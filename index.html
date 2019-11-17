@@ -21,65 +21,80 @@
   <header>
     <h1 id="title">AST Visualizer</h1>
   </header>
-  <h1>How do computers parse expressions ?</h1>
-  <br>
-  <div>
-    Have you ever wondered how computers parse expressions ?
+  <main>
+    <p>
+      <h1>How do computers parse expressions ?</h1>
+    </p>
+    <div>
+      Have you ever wondered how computers parse expressions ?
 
-    Well, it's not as simple as you may think. But it's not too difficult either ! <br>
-    First off, it needs to breakdown the expression into smallest possible chunks called 'tokens'.
-    So for a simple mathematical expression like <span class='quote'>'1 + 2*3' </span>, the tokens would be
-    <span class='code'>['1','+','2', '*' , '3']</span>.
+      <p>
+        Well, it's not as simple as you may think. But it's not too difficult either ! <br>
+        First off, it needs to breakdown the expression into smallest possible chunks called 'tokens'.
+        So for a simple mathematical expression like <span class='quote'>'1 + 2*3' </span>, the tokens would be
+        <span class='code'>['1','+','2', '*' , '3']</span>.
+      </p>
+      <p>
+        Usually, a token is not just a string but a number containing additional information like it's position and
+        type.
+        So
+        a '*' token would look like :
+      </p>
+      <img src="images/image1.png">
+      <br>
+      <p>
+        But for something as simple as a mathematical expression parser, a token can simply be a '*' or a '12'.
+        Next, we create what's called an AST or an
+        <a href="https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff">Abstract Syntax
+          Tree.</a>
+        What that means, is we arrange the tokens in a Binary Tree data structure which when traversed properly will
+        evaluate to the
+        result of the expression. <br>
+        If we perform post-order traversal on the tree, then we can successfully evaluate the expression given the tree
+        was
+        formed properly.
+      </p>
+      <p>
+        What I have here, is a simple expression parser that employs the <a
+          href="https://en.wikipedia.org/wiki/Pratt_parser">Pratt
+          parsing algorithm</a> to build a parse tree and then
+        visualizes how a computer would go about evaluating it. You can find the source code for this on github.
+      </p>
+      <br>
+      <p><a href="https://github.com/tiltproofRain/JS-Expression-parser">Here</a> is a much simpler expression
+        parser I wrote in Javascript that can parse expressions like
+      </p><span class='quote'>'1 + 3%2 - (1 - 7 ^ 2
+        % 2 * 3)'</span>
+    </div>
+
+    <div class='input-container'>
+      <h1>Try it out !</h1>
+      <span>Enter an expression : </span> <br><br>
+      <input id="input" type="text">
+      <button id="parse">Parse!</button>
+    </div>
+
+    <div id="output-container">
+
+    </div>
+
     <br>
-    Usually, a token is not just a string but an object containing additional information like it's position and type. So
-    a '*' token would look like :
     <br>
-    <img src="images/image1.png">
+    <div>
+      <h3>Resources : </h3>
+      <br>
+      <ul>
+        <li><a href="https://dev.to/jrop/pratt-parsing">Pratt Parsing (Jonathan Apodaca)</a></li>
+        <li><a href="https://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/">Pratt
+            Parsers: Expression Parsing Made Easy (Bob Nystrom)</a></li>
+        <li><a href="https://eli.thegreenplace.net/2010/01/02/top-down-operator-precedence-parsing">Top-Down operator
+            precedence parsing (Eli Bendersky)</a></li>
+      </ul>
+    </div>
+    <br>
     <br>
 
-    But for something as simple as a mathematical expression parser, a token can simply be a '*' or a '12'.
-    Next, we create what's called an AST or an
-    <a href="https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff">Abstract Syntax Tree.</a>
-    What that means, is we arrange the tokens in a Binary Tree data structure which when traversed properly will
-    evaluate to the
-    result of the expression. <br>
-    If we perform post-order traversal on the tree, then we can successfully evaluate the expression given the tree was
-    formed properly. <br><br>
-    What I have here, is a simple expression parser that employs the <a
-      href="https://en.wikipedia.org/wiki/Pratt_parser">Pratt
-      parsing algorithm</a> to build a parse tree and then
-    visualizes how a computer would go about evaluating it. You can find the source code for this on github.
-    <br><br><a href="https://github.com/tiltproofRain/JS-Expression-parser">Here</a> is a much simpler expression parser I wrote in Javascript that can parse expressions like
-    <br><span class='quote'>'1 + 3%2 - (1 - 7 ^ 2
-      % 2 * 3)'</span>
-  </div>
-
-  <div class='input-container'>
-    <h1>Try it out !</h1>
-    <span>Enter an expression : </span> <br><br>
-    <input id="input" type="text">
-    <button id="parse">Parse!</button>
-  </div>
-
-  <div id="output-container">
-
-  </div>
-
-  <br>
-  <br>
-  <div>
-    <h3>Resources : </h3>
-    <br>
-    <ul>
-      <li><a href="https://dev.to/jrop/pratt-parsing">Pratt Parsing (Jonathan Apodaca)</a></li>
-      <li><a href="https://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/">Pratt
-          Parsers: Expression Parsing Made Easy (Bob Nystrom)</a></li>
-      <li><a href="https://eli.thegreenplace.net/2010/01/02/top-down-operator-precedence-parsing">Top-Down operator
-          precedence parsing (Eli Bendersky)</a></li>
-    </ul>
-  </div>
-  <br>
-  <br>
+  </main>
 
 </body>
 
